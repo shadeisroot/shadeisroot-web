@@ -1,0 +1,74 @@
+:root {
+  --bg: #0d1117;
+  --surface: #161b22;
+  --text: #c9d1d9;
+  --muted: #6e7681;
+  --accent: #3fb950;      /* terminal green */
+  --border: #21262d;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.5rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.brand {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.cursor {
+  animation: blink 1.1s steps(1) infinite;
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.links {
+  display: flex;
+  gap: 1.4rem;
+}
+
+.links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.15s ease;
+}
+
+.links a:hover {
+  color: var(--text);
+}
+
+.links a.active {
+  color: var(--accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor { animation: none; }
+}
+
+main {
+  padding: 2rem 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}

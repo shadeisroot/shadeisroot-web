@@ -1,0 +1,13 @@
+<section class="page">
+  <p class="crumb"><span class="accent">~/status</span> — homelab services</p>
+
+  <div class="status-grid">
+    <div class="service" *ngFor="let s of placeholderServices">
+      <span class="indicator" [class.up]="s.up" [class.down]="!s.up"></span>
+      <span class="svc-name">{{ s.name }}</span>
+      <span class="svc-state">{{ s.up ? 'online' : 'offline' }}</span>
+    </div>
+  </div>
+
+  <p class="note">Live status checks coming soon.</p>
+</section>

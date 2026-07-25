@@ -1,0 +1,30 @@
+<section class="terminal" role="region" aria-label="Terminal introduction">
+  <div class="term-header">
+    <span class="dot red"></span>
+    <span class="dot amber"></span>
+    <span class="dot green"></span>
+    <span class="term-title">shadeisroot@web: ~</span>
+  </div>
+
+  <div class="term-body">
+    <div class="line" *ngFor="let line of visibleLines()">
+      <span *ngIf="line.prompt" class="prompt">
+        <span class="user">shadeisroot</span><span class="host">@web</span>:<span class="path">~</span>$
+      </span>
+      <span [class]="'out ' + (line.cls || '')">{{ line.text }}</span>
+    </div>
+
+    <div class="line" *ngIf="!done()">
+      <span class="prompt">
+        <span class="user">shadeisroot</span><span class="host">@web</span>:<span class="path">~</span>$
+      </span>
+      <span class="typed">{{ typed() }}</span><span class="cursor">▋</span>
+    </div>
+  </div>
+
+  <div class="actions" *ngIf="done()">
+    <a routerLink="/projects" class="btn primary">View projects</a>
+    <a href="https://github.com/shadeisroot" target="_blank" rel="noopener" class="btn">GitHub</a>
+    <a href="/cv.pdf" target="_blank" class="btn">Download CV</a>
+  </div>
+</section>

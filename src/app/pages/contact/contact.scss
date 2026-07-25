@@ -1,0 +1,48 @@
+:host { display: block; }
+
+.crumb {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+.crumb .accent { color: var(--accent); }
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 500px;
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.contact-form label span {
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.7rem;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.note {
+  margin-top: 2rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.note a { color: var(--accent); }

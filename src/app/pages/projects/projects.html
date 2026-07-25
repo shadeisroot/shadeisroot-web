@@ -1,0 +1,19 @@
+<section class="page">
+  <p class="crumb"><span class="accent">~/projects</span> — things I've built</p>
+
+  <div class="repo-grid">
+    <article class="repo" *ngFor="let r of placeholderRepos">
+      <div class="repo-head">
+        <i class="repo-icon">▸</i>
+        <span class="repo-name">{{ r.name }}</span>
+        <span class="repo-lang" *ngIf="r.language">{{ r.language }}</span>
+      </div>
+      <p class="repo-desc">{{ r.description }}</p>
+      <div class="repo-meta">
+        <span>★ {{ r.stars }}</span>
+      </div>
+    </article>
+  </div>
+
+  <p class="note">Live GitHub data coming soon.</p>
+</section>

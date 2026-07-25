@@ -1,0 +1,23 @@
+<section class="page">
+  <p class="crumb"><span class="accent">~/contact</span> — get in touch</p>
+
+  <form class="contact-form" (ngSubmit)="onSubmit()">
+    <label>
+      <span>name</span>
+      <input type="text" [(ngModel)]="form.name" name="name" required>
+    </label>
+    <label>
+      <span>email</span>
+      <input type="email" [(ngModel)]="form.email" name="email" required>
+    </label>
+    <label>
+      <span>message</span>
+      <textarea [(ngModel)]="form.message" name="message" rows="5" required></textarea>
+    </label>
+    <button type="submit" class="btn primary">Send message</button>
+  </form>
+
+  <p class="note">Form wiring coming soon — for now, reach me on
+    <a href="https://github.com/shadeisroot" target="_blank" rel="noopener">GitHub</a>.
+  </p>
+</section>
