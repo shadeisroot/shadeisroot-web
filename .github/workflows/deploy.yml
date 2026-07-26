@@ -21,5 +21,5 @@ jobs:
 
       - name: Publish to Nginx
         run: |
-          rsync -a --delete dist/shadeisroot-web/browser/ /var/www/shadeisroot-web/
+          rsync -a --delete dist/shadeisroot-web/browser/ /var/www/shadeisroot/
           sudo systemctl reload nginx
